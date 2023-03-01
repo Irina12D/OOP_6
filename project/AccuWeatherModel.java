@@ -48,8 +48,6 @@ public class AccuWeatherModel implements WeatherModel {
                 Response oneDayForecastResponse = okHttpClient.newCall(request1).execute();
                 String weatherResponse1 = oneDayForecastResponse.body().string();
                 System.out.println(weatherResponse1);
-                //TODO: сделать человекочитаемый вывод погоды. Выбрать параметры для вывода на свое усмотрение
-                //Например: Погода в городе Москва - 5 градусов по цельсию Expect showers late Monday night
                 break;
             case FIVE_DAYS:
                 HttpUrl httpUrl5 = new HttpUrl.Builder()
